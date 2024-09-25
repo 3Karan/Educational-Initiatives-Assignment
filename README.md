@@ -43,6 +43,17 @@ To run either exercise, ensure you have Java Development Kit (JDK) version 8 or 
 ```bash
 javac Main.java
 java Main
+```
 
 ## Author
 Karan Chaudhary
+
+## License
+This project is licensed under
+
+
+
+
+
+
+
