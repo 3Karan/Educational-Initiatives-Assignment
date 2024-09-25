@@ -1,18 +1,61 @@
-# Exercise One: Design Patterns Implementation
+# Exercise One: Design Patterns Demonstration
 
-## Overview
-This project demonstrates the implementation of various design patterns in Java. The objective is to showcase the use of behavioral, creational, and structural design patterns in a well-structured console application. The project adheres to SOLID principles and coding best practices.
+This project demonstrates the implementation of six design patterns through coding, showcasing two use cases for each category: behavioral, creational, and structural design patterns.
 
-## Design Patterns Implemented
-### Behavioral Design Patterns
-1. **Strategy Pattern**: Used for defining a family of algorithms and making them interchangeable.
-2. **Observer Pattern**: Implemented to allow a one-to-many dependency between objects so that when one object changes state, all its dependents are notified.
+## Table of Contents
+1. [Behavioral Design Patterns](#behavioral-design-patterns)
+   - [Observer Pattern](#observer-pattern)
+   - [Command Pattern](#command-pattern)
+2. [Creational Design Patterns](#creational-design-patterns)
+   - [Singleton Pattern](#singleton-pattern)
+   - [Factory Method Pattern](#factory-method-pattern)
+3. [Structural Design Patterns](#structural-design-patterns)
+   - [Adapter Pattern](#adapter-pattern)
+   - [Decorator Pattern](#decorator-pattern)
+4. [How to Run the Code](#how-to-run-the-code)
+5. [Best Practices](#best-practices)
 
-### Creational Design Patterns
-1. **Singleton Pattern**: Ensures a class has only one instance and provides a global point of access to it.
-2. **Factory Method Pattern**: Used to create objects without specifying the exact class of object that will be created.
+## Behavioral Design Patterns
 
-### Structural Design Patterns
-1. **Adapter Pattern**: Allows incompatible interfaces to work together by acting as a bridge between them.
-2. **Composite Pattern**: Used to treat individual objects and compositions of objects uniformly.
+### Observer Pattern
+- **Scenario**: A weather station system that notifies multiple displays (mobile, TV, computer) when the weather changes.
+- **Implementation**: 
+  - A `WeatherStation` class stores the current weather.
+  - The `Observer Pattern` is used to notify display devices when the weather changes. Displays subscribe to the weather station, and when the weather is updated, all displays are notified.
+
+### Command Pattern
+- **Scenario**: A remote control that sends commands to devices (like TV, lights, etc.).
+- **Implementation**:
+  - Create a `Command` interface with methods like `execute()` and `undo()`.
+  - Implement concrete commands like `TurnOnTVCommand` and `TurnOffLightCommand`.
+  - A `RemoteControl` class holds commands and triggers them when a button is pressed.
+
+## Creational Design Patterns
+
+### Singleton Pattern
+- **Scenario**: A logging system where only one instance of the logger should exist across the entire application.
+- **Implementation**:
+  - Create a `Logger` class with a private constructor and a static method to return the single instance.
+  - Ensure that no new logger instance can be created.
+
+### Factory Method Pattern
+- **Scenario**: A document editor that can create different types of documents (Word, PDF, Spreadsheet).
+- **Implementation**:
+  - Create a `DocumentFactory` class that returns different document objects based on input (e.g., `createDocument("PDF")` returns a `PDFDocument`).
+  - Each document (like `WordDocument` and `PDFDocument`) is a subclass of a base `Document` class.
+
+## Structural Design Patterns
+
+### Adapter Pattern
+- **Scenario**: An application that needs to integrate with two different payment gateways (Stripe and PayPal) but they have different APIs.
+- **Implementation**:
+  - Use the `Adapter Pattern` to create an adapter that makes both payment gateways work with a unified interface.
+  - Implement adapters like `StripeAdapter` and `PayPalAdapter` to convert the requests to each payment system’s API.
+
+### Decorator Pattern
+- **Scenario**: A coffee shop where you can add various toppings (milk, sugar, whipped cream) to a coffee order.
+- **Implementation**:
+  - Create a base `Coffee` class and concrete classes for different types of coffee.
+  - Use decorators like `MilkDecorator` and `SugarDecorator` to dynamically add toppings to the coffee.
+
 
