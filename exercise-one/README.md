@@ -58,4 +58,6 @@ This project demonstrates the implementation of six design patterns through codi
   - Create a base `Coffee` class and concrete classes for different types of coffee.
   - Use decorators like `MilkDecorator` and `SugarDecorator` to dynamically add toppings to the coffee.
 
+## How to Run
+Each design pattern example can be run independently. Simply compile and execute the corresponding Java file for the specific design pattern you wish to test.
 
